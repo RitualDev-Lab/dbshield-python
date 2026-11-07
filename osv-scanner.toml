@@ -1,0 +1,6 @@
+# OpenSSF OSV-Scanner Configuration for DBShield Python SDK
+# See: https://google.github.io/osv-scanner/configuration/
+
+[[IgnoredVulns]]
+id = "GHSA-6w46-j5rx-g56g"
+reason = "Test dependency pytest tmpdir handling does not affect DBShield SQL query safety, PII redaction, or database sandboxing."
