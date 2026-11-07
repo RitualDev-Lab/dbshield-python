@@ -2,5 +2,9 @@
 # See: https://google.github.io/osv-scanner/configuration/
 
 [[IgnoredVulns]]
+id = "GHSA-5239-wwwm-4pmq"
+reason = "Dev/test dependency Pygments is used only for terminal formatting in test output, not processing untrusted regex input."
+
+[[IgnoredVulns]]
 id = "GHSA-6w46-j5rx-g56g"
 reason = "Test dependency pytest tmpdir handling does not affect DBShield SQL query safety, PII redaction, or database sandboxing."
