@@ -35,7 +35,8 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Topic :: Security",
     "Topic :: Database",
-    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed"
 ]
 requires-python = ">=3.10"
 dependencies = []
@@ -58,6 +59,9 @@ llamaindex = [
 sqlalchemy = [
     "sqlalchemy>=2.0.57"
 ]
+all = [
+    "dbshield-defense[langchain,crewai,llamaindex,sqlalchemy]"
+]
 
 [project.urls]
 Homepage = "https://ritualdev.in/dbshield"
@@ -68,3 +72,6 @@ Issues = "https://github.com/RitualDev-Lab/dbshield-python/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+dbshield = ["py.typed"]
