@@ -1,0 +1,37 @@
+{% set name = "dbshield-defense" %}
+{% set version = "0.2.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/dbshield_defense-{{ version }}.tar.gz
+  sha256: 50c06a4dae3974af0bb96bdacd16f255fe0ff38a19ddb6308dc46756645987fd
+
+build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
+
+requirements:
+  host:
+    - python >=3.9
+    - setuptools >=61.0
+    - wheel
+    - pip
+  run:
+    - python >=3.9
+
+test:
+  imports:
+    - dbshield
+  commands:
+    - pip check
+
+about:
+  home: https://github.com/RitualDev-Lab/DBShield
+  summary: Database Guardrail, SQL AST Firewall & Sandboxing Wire Proxy for AI Coding Agents in Python
+  license: MIT
+  license_file: LICENSE
+  dev_url: https://github.com/RitualDev-Lab/dbshield-python
