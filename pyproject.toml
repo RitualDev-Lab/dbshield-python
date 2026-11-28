@@ -51,7 +51,7 @@ langchain = [
     "langchain-core>=1.7.7"
 ]
 crewai = [
-    "crewai>=1.15.39"
+    "crewai>=1.15.45"
 ]
 llamaindex = [
     "llama-index-core>=0.14.25"
